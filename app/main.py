@@ -19,6 +19,7 @@ class Person:
             setattr(self, "husband", spouse)
             spouse.wife = self
 
+
 def create_person_list(people: list) -> list:
     for person in people:
 
@@ -26,13 +27,13 @@ def create_person_list(people: list) -> list:
 
         if person.get("wife") in Person.people.keys():
             new_person.set_spouse(
-                spouse_name = person["wife"],
+                spouse_name=person["wife"],
                 is_wife=True
             )
 
         if person.get("husband") in Person.people.keys():
             new_person.set_spouse(
-                spouse_name = person["husband"],
+                spouse_name=person["husband"],
                 is_wife=False
             )
 
